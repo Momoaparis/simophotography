@@ -1,0 +1,111 @@
+body {
+    font-family: "Helvetica", "sans-serif";
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0b0b; /* Set background color to dark gray */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.logo {
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: rgba(11, 11, 11, 0.5); /* Match body color and make it semi-transparent */
+    padding: 35px; /* Increase padding to increase height */
+    width: 100%; /* Match the width of the slideshow container */
+    position: fixed; /* Position the footer fixed */
+    bottom: 40px; /* Raise the footer position */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust position to be truly centered */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensure vertical alignment */
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative; /* For dropdown positioning */
+}
+
+nav ul li a {
+    color: #d3d3d3; /* Set font color to light gray */
+    text-decoration: none;
+    font-size: 16px; /* Reduce font size */
+    line-height: 1.5; /* Ensure consistent height */
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(37, 37, 37, 0.9); /* Darker transparent gray background */
+    min-width: 250px; /* Increase width of dropdown menu */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    bottom: 100%; /* Position the dropdown menu above the parent */
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    color: #d3d3d3; /* Set font color to light gray */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px; /* Reduce font size for dropdown content */
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #575757;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 33%; /* Further adjusted width */
+    margin: auto;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 5s;
+}
+
+@keyframes fade {
+    0% {opacity: 0}  
+    50% {opacity: 1}
+    100% {opacity: 0}
+}
