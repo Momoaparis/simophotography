@@ -109,3 +109,42 @@ nav ul li:hover .dropdown-content {
     50% {opacity: 1}
     100% {opacity: 0}
 }
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Increase font size for better readability on mobile */
+    }
+
+    header {
+        flex-direction: column; /* Stack header elements vertically */
+        padding: 10px;
+    }
+
+    .logo {
+        height: 50px; /* Reduce logo size */
+        margin-bottom: 5px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px; /* Add space between items */
+    }
+
+    nav ul li a {
+        font-size: 18px; /* Increase font size for better readability */
+    }
+
+    .slideshow-container {
+        max-width: 100%; /* Use full width on mobile */
+    }
+
+    footer {
+        padding: 20px; /* Reduce padding */
+        bottom: 0; /* Position footer at the bottom */
+    }
+}
