@@ -11,7 +11,12 @@
         <div class="logo">
             <img src="baptemeimages/logo.png" alt="Si Mo Photography Logo">
         </div>
-        <nav>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="mobile-nav">
             <ul>
                 <li><a href="index.html">HOME / 主页</a></li>
                 <li class="dropdown">
@@ -50,7 +55,7 @@
         <h1>Baptêmes / 洗礼</h1>
     </header>
     
-    <div class="slideshow-container">
+    <div class="slideshow-container" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)">
         <div class="mySlides fade">
             <img src="baptemeimages/photo1.jpg" style="width:100%">
         </div>
