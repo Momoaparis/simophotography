@@ -233,3 +233,100 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* 移动端样式 */
+@media screen and (max-width: 768px) {
+  /* 隐藏桌面导航 */
+  nav.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #444;
+    z-index: 1000;
+  }
+
+  /* 显示移动菜单按钮 */
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+  }
+
+  .mobile-menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  /* 移动端导航样式 */
+  nav.mobile-nav ul {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  nav.mobile-nav ul li {
+    display: block;
+    margin: 0;
+  }
+
+  nav.mobile-nav ul li a {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  /* 下拉菜单样式 */
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: #333;
+  }
+
+  /* 图片轮播优化 */
+  .slideshow-container {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .prev, .next {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  /* 其他调整 */
+  h1 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .logo img {
+    max-width: 200px;
+  }
+}
+
+/* 移动菜单激活状态 */
+.mobile-nav.active {
+  display: block;
+}
+
+.mobile-menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
